@@ -5,15 +5,14 @@
     <title>angular App</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
     <link rel="stylesheet" href="app.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+    <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
     <script src="node_modules\angular\angular.js"></script>
     <script src="controller/controller.js"></script>
     <script src="services/dbService.js"></script>
@@ -29,7 +28,8 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="row">
-            <div class="col-lg-6" ng-repeat="band in bands">
+            <div class="col-lg-6"
+                ng-repeat="band in bands">
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h3>{{band.name}}</h3>
@@ -37,7 +37,8 @@
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-lg-6">
-                      <img ng-src="{{band.img_url}}" alt="" class="img-responsive img-thumbnail">
+                      <img ng-src="{{band.img_url}}"
+                           class="img-responsive img-thumbnail">
                     </div>
                     <div class="col-lg-6">
                       <p>{{band.info.substring(0,200)}}...</p>
@@ -60,7 +61,6 @@
               <!-- Modal -->
               <div id="myModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
-
                   <!-- Modal content-->
                   <div class="modal-content">
                     <div class="modal-header">
